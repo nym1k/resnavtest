@@ -1,0 +1,148 @@
+* {
+  font-family: 'Amiko', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+
+/* Nav Styles */
+
+#toggleMenu {
+  width: 40px;
+  height: 40px;
+  background: url('menu-icon.png') no-repeat;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.menu {
+	background: #333;
+	position: fixed;
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+  left: -240px;
+}
+
+.menu ul {
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.nav-brand,
+.menu a {
+	display: block;
+	color: #fff;
+  padding: 1em;
+}
+
+.menu a {
+  font-size: 1.1em;
+  font-weight: 300;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+}
+
+.menu a:hover {
+	background: #ff4847;
+}
+
+.menu a:active {
+	background: #afdefa;
+	color: #47a3da;
+}
+
+/* Nav Toggled Classes*/
+
+.menu-open {
+	left: 0px;
+}
+
+.menu-push {
+	left: 240px;
+}
+
+/* Section Styles */
+
+section {
+  background: url('bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 991px) {
+  .menu,
+  .wrap {
+  	-webkit-transition: all 0.3s ease;
+  	-moz-transition: all 0.3s ease;
+  	transition: all 0.3s ease;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+  /* Nav Styles */
+
+  #toggleMenu {
+    display: none;
+  }
+
+  .menu,
+  .menu ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background: none;
+  }
+
+  .menu ul {
+    margin-left: auto;
+    height: 100%;
+    width: 400px;
+    justify-content: space-around;
+  }
+
+  .nav-brand,
+  .menu a {
+    padding: 0;
+  }
+
+  .nav-brand {
+    padding-left: 20px;
+  }
+
+  .menu li,
+  .menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .menu a {
+    border: 0;
+  }
+}
