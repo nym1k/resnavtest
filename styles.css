@@ -57,10 +57,6 @@
   text-decoration: none;
 }
 
-.menu a:hover {
-	background: #ff4847;
-}
-
 .menu a:active {
 	background: #afdefa;
 	color: #47a3da;
@@ -94,6 +90,9 @@ section {
   	-moz-transition: all 0.3s ease;
   	transition: all 0.3s ease;
   }
+  .menu a:hover {
+  	background: #ff4847;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -115,17 +114,16 @@ section {
     height: 50px;
     width: 100%;
     background: none;
+    padding: .5rem 1rem;
   }
 
   .menu ul {
     margin-left: auto;
     height: 100%;
-    width: 400px;
     justify-content: space-around;
   }
 
-  .nav-brand,
-  .menu a {
+  .nav-brand {
     padding: 0;
   }
 
@@ -133,13 +131,8 @@ section {
     padding-left: 20px;
   }
 
-  .menu li,
   .menu a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
+    padding: 0 .5rem;
   }
 
   .menu a {
