@@ -61,9 +61,13 @@ body {
   text-decoration: none;
 }
 
+.menu a:hover {
+  background: #ff4847;
+}
+
 .menu a:active {
-	background: #afdefa;
-	color: #47a3da;
+	background: #333;
+	color: #ff4847;
 }
 
 /* Section Styles */
@@ -77,19 +81,13 @@ section {
 
 /* Media Queries */
 
-@media only screen and (max-width: 991px) {
-  .menu a:hover {
-  	background: #ff4847;
-  }
-}
-
 @media only screen and (min-width: 992px) {
-
-  /* Nav Styles */
 
   #menuToggle {
     display: none;
   }
+
+  /* Nav Styles */
 
   .menu,
   .menu ul {
@@ -112,18 +110,22 @@ section {
   }
 
   .nav-brand {
-    padding: 0;
-  }
-
-  .nav-brand {
-    padding-left: 20px;
+    padding: 0 20px 0 0;
   }
 
   .menu a {
     padding: 0 .5rem;
+    border: 0;
+    color: rgba(255,255,255,0.7);
   }
 
-  .menu a {
-    border: 0;
+  .menu a:hover {
+    background: none;
+    color: #ff4847;
+  }
+
+  .menu a:active {
+  	background: none;
+  	color: #fff;
   }
 }
