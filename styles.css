@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+}
+
 .wrap {
   width: 100%;
   overflow-x: hidden;
@@ -15,7 +19,7 @@
 
 /* Nav Styles */
 
-#toggleMenu {
+#menuToggle {
   width: 40px;
   height: 40px;
   background: url('img/menu-icon.svg') no-repeat;
@@ -62,16 +66,6 @@
 	color: #47a3da;
 }
 
-/* Nav Toggled Classes*/
-
-.menu-open {
-	left: 0px;
-}
-
-.menu-push {
-	left: 240px;
-}
-
 /* Section Styles */
 
 section {
@@ -84,12 +78,6 @@ section {
 /* Media Queries */
 
 @media only screen and (max-width: 991px) {
-  .menu,
-  .wrap {
-  	-webkit-transition: all 0.3s ease;
-  	-moz-transition: all 0.3s ease;
-  	transition: all 0.3s ease;
-  }
   .menu a:hover {
   	background: #ff4847;
   }
@@ -99,7 +87,7 @@ section {
 
   /* Nav Styles */
 
-  #toggleMenu {
+  #menuToggle {
     display: none;
   }
 
